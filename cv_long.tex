@@ -1,0 +1,318 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Professional Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------
+
+\documentclass[11pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+
+\usepackage[
+backend=biber,
+style=authoryear,
+sorting=ydnt,
+]{biblatex}
+\addbibresource{publications.bib}
+
+\newcommand{\mysection}[1]{%
+	\pagebreak[0]\section{#1}\vspace{1em}
+}
+
+\newenvironment{indentedblock*}[1][\parindent]
+  {%
+    \par
+    \medskip
+    \leftskip#1\relax
+  }
+  {%
+    \par
+    \medskip
+  }
+
+\newsectionwidth{0pt} % Stops section indenting
+
+\begin{document}
+\nocite{*}
+
+%--------------------------------------------------------------------
+%	NAME AND ADDRESS(ES) SECTION
+%--------------------------------------------------------------------
+
+\name{Charles ``Chuck" Wooters} % Your name at the top
+\address{wooters@hey.com}
+
+%--------------------------------------------------------------------
+\begin{resume}
+
+%--------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE SECTION
+%--------------------------------------------------------------------
+\vspace{2em}
+\hrule
+
+\mysection{EXPERIENCE}
+
+%-------------------------------
+\employer{\textbf{Dabkick, Inc}}
+\title{{\sl VP AI, Products, and Engineering}}
+\dates{Jan 2021 - Present}
+\location{Cupertino, CA}
+\begin{position}
+
+\vspace{-.4in}
+
+\begin{indentedblock*}[.1in]
+{\sl Dabkick, Inc was acquired in July 2021. Details are currently confidential.}
+
+At Dabkick, I have been leading the design and development of a conversational AI
+for the connected TV domain. We are creating a speech-based entertainment
+"concierge" that can: control a streaming television device, provide information
+about movies and TV shows, and provide personalized recommendations.
+\end{indentedblock*}
+
+\end{position}
+
+
+
+%------------------------------
+\employer{\textbf{Microsoft/Semantic Machines}}
+\title{{\sl Principal Researcher}}
+\dates{2016-2021}
+\location{Berkeley, CA}
+\begin{position}
+
+\vspace{-.4in}
+
+\begin{indentedblock*}[.1in]
+
+{\sl Semantic Machines was acquired by Microsoft in 2018.}
+
+My main research focus was modeling human conversational behavior. As part of this effort, I built a prototype conversational AI framework that allowed real-time, full-duplex, human-computer dialogue (similar to Google's "Duplex" system). This framework served as a test-bed for the evaluation of research ideas in a realistic conversational setting. In addition to creating the (python-based) framework, I created prototypes  for several sub-components including: turn-taking, speaker identification, addressee detection. Other projects I worked on included: Dialogue-aware text-to-speech, GPT-2 based data-augmentation for dialogue systems
+
+\end{indentedblock*}
+
+\end{position}
+
+
+%------------------------------
+\employer{\textbf{Raytheon (Applied Signal Technology)}}
+\title{{\sl Engineering Fellow}}
+\dates{2015-2016}
+\location{Sunnyvale, CA}
+\begin{position}
+
+\vspace{-.4in}
+\begin{indentedblock*}[.1in]
+
+I performed classified research in the area of human language technologies.
+
+\end{indentedblock*}
+
+\end{position}
+
+
+%------------------------------
+\pagebreak[3]
+
+\employer{\textbf{Apple (Siri)}}
+\title{{\sl Senior Software Engineer}}
+\dates{2013-2015}
+\location{Cupertino, CA}
+\begin{position}
+
+\vspace{-.4in}
+\begin{indentedblock*}[.1in]
+
+During my time at Apple, I made several contributions to Siri: I implemented a false-alarm mitigation algorithm for the “Hey Siri” wake-word, I created metrics for joint ASR/NL evaluation, I created NL annotation guidelines for semantic role labeling and intent classification, I refactored an incredibly convoluted tangle of bash/perl/python scripts that was responsible for running the nightly Siri LM updates.
+
+\end{indentedblock*}
+
+\end{position}
+
+
+%------------------------------
+\pagebreak[3]
+
+\employer{\textbf{International Computer Science Inst.}}
+\title{{\sl Senior Research Engineer}}
+\dates{2000-2007, 2012-2013}
+\location{Berkeley, CA}
+\begin{position}
+
+\vspace{-.4in}
+\begin{indentedblock*}[.1in]
+
+Some of the projects I worked on at ICSI included: Led ICSI's initial efforts in speaker diarization including participating in multiple NIST/DARPA evaluations, was a key contributor to ICSI and SRI's hybrid MLP/HMM ASR system, I designed and built an ad-hoc multi-microphone array for meeting rooms, I designed the initial database and annotation tools for the FrameNet lexical database project led by Berkeley Linguistics Prof. Charles Fillmore, and I ported the FrameNet database to the open-source NLTK project (https://www.nltk.org).
+
+\end{indentedblock*}
+
+\end{position}
+
+
+%------------------------------
+\pagebreak[3]
+
+\employer{\textbf{Johns Hopkins University (HLT/COE)}}
+\title{{\sl Adjunct Researcher}}
+\dates{Summer 2009 and 2013}
+\location{Baltimore, MD}
+\begin{position}
+
+\vspace{-.4in}
+\begin{indentedblock*}[.1in]
+
+I was a participant in the SCALE (Summer Camp for Applied Language Exploration) workshops. In 2009 I was focused on building ASR systems from large quantities of unlabelled data. In 2013 the focus was on domain-mismatch within an I-vector/PLDA speaker ID system.
+
+\end{indentedblock*}
+
+\end{position}
+
+%------------------------------
+\pagebreak[3]
+\employer{\textbf{Next IT Corp.\ (now Verint)}}
+\title{{\sl Chief Speech Scientist}}
+\dates{2007-2012}
+\location{Spokane, WA}
+\begin{position}
+
+\vspace{-.4in}
+
+\begin{indentedblock*}[.1in]
+At Next IT I was building automated virtual assistants for customer service applications. I led the transformation of the company's rules-based chatbot technology to a statistical machine learning-based approach. Additionally, I was responsible for the development of Next IT's IP strategy and portfolio. My technical contributions focused on the following areas: question answering, automatic intent classification, agglomerative clustering of user queries, and unsupervised topic modeling.
+
+\end{indentedblock*}
+\end{position}
+
+%------------------------------
+\pagebreak[3]
+
+\employer{\textbf{BBN Technologies}}
+\title{{\sl Senior Scientist}}
+\dates{1999-2000}
+\location{Boston, MA and Columbia, MD}
+\begin{position}
+
+\vspace{-.4in}
+\begin{indentedblock*}[.1in]
+
+I served as the liaison between the language technologies group at BBN and the U.S. Dept. of Defense. I also designed and tested various algorithmic modifications for a Mandarin ASR system as part of the NIST/DARPA evaluations.
+
+\end{indentedblock*}
+
+\end{position}
+
+
+%------------------------------
+\pagebreak[3]
+
+\employer{\textbf{US Department of Defense}}
+\title{{\sl Senior Computer Scientist}}
+\dates{1993-1995, 1997-1999, 2009-2010}
+\location{Fort Meade, MD}
+\begin{position}
+
+\vspace{-.4in}
+\begin{indentedblock*}[.1in]
+
+I performed classified research in the area of human language technologies.
+
+\end{indentedblock*}
+
+\end{position}
+
+
+
+%------------------------------
+\pagebreak[0]
+
+\employer{\textbf{Computer Motion, Inc}}
+\title{{\sl Sr.\ Member of Tech Staff}}
+\dates{1995-1997}
+\location{Goleta, CA}
+\begin{position}
+
+\vspace{-.4in}
+\begin{indentedblock*}[.1in]
+
+I developed an embedded speech recognition system for a surgical robotic arm based on the HTK ASR toolkit. The ASR system was an always-listening, small-vocabulary, speaker-dependent, command-and-control system for operating room environments. It was the first automatic speech recognition system to be granted US FDA approval for use on humans.
+
+\end{indentedblock*}
+
+\end{position}
+
+
+%--------------------------------------------------------------------------
+%	EDUCATION SECTION
+%--------------------------------------------------------------------------
+\pagebreak[2]
+\mysection{EDUCATION}
+
+\begin{tabular}{llcc}
+  Ph.D.\ & Speech Recognition & UC Berkeley & 1993 \\[.5em]
+  M.A.\ & Linguistics & UC Berkeley & 1988 \\[.5em]
+  B.A.\ & Linguistics & UC Berkeley & 1986
+\end{tabular}
+
+ 
+%--------------------------------------------------------------------------
+% SKILLS SECTION
+%--------------------------------------------------------------------------
+\mysection{SKILLS}
+
+\begin{tabular}{ll}
+Languages & Python, C, (some: Golang, Scala, Java, C++)  \\[.5em]
+Revision Control & Git (GitHub, CodeCommit, GitLab) \\[.5em]
+ML Tools & NumPy, SciPy, scikit-learn, pandas, PyTorch, TensorFlow, Kaldi \\[.5em]
+Operating Systems &	Gnu/Linux (Ubuntu), Mac OS \\[.5em]
+Cloud Services & AWS (cdk, lambda, s3, ec2, etc.), Azure (various cog services)
+
+\end{tabular}
+	
+
+%--------------------------------------------------------------------------
+%	ACTIVITIES SECTION
+%--------------------------------------------------------------------------
+\mysection{ACTIVITIES}
+
+\begin{tabular}{ll}
+  Reviewer & ICML, ICASSP, ICLSP, ASRU, SLT, Computer Speech \& Language \\[.5em]
+  Demo Co-chair & 2016 Spoken Language Technology workshop \\[.5em]
+  SLT Committee & Served on the Speech and Language Technical Committee from 2008-2012 \\[.5em]
+  External Reviewer & Lawrence Livermore National Labs - Lab-directed R\&D 
+\end{tabular}
+
+
+%--------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%--------------------------------------------------------------------
+% we need heading=bibnumbered here to tell biblatex to use \section 
+% not \section* (which will produce a spurious * with this class)
+%
+\pagebreak[3]
+
+\printbibliography[type=patent,title={PATENTS},heading=subbibliography]
+
+\pagebreak[3]
+\printbibliography[nottype=patent,title={PUBLICATIONS},heading=subbibliography]
+
+
+%--------------------------------------------------------------------------
+
+\end{resume}
+
+\end{document}
